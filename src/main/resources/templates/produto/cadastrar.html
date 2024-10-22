@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de produto</title>
+</head>
+<body>
+
+<form action="/produto/cadastrar" method="post">
+    <input type="text" name="nome" placeholder="Digite o nome">
+    <input type="text" name="preco" placeholder="Digite o preço">
+    <input type="submit" value="salvar">
+</form>
+<p th:text="${prod.nome}"></p>
+<p th:text="${prod.valor}"></p>
+<p th:text="${msg}"></p>
+</body>
+</html>
