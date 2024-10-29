@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Veiculo</title>
+</head>
+<body>
+
+<form action="/veiculo/cadastrar" method="post">
+    <label>Nome</label>
+    <input type="text" name="nome">
+    <label>Marca</label>
+    <input type="text" name="nome">
+    <label>Cor</label>
+    <input type="text" name="nome">
+    <label>Ano de Fabricação</label>
+    <input type="text" name="nome">
+    <button>Cadastrar</button>
+</form>
+
+<a th:href="@{/home}">Home</a>
+
+</body>
+</html>

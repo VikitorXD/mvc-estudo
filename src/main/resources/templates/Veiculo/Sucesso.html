@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Sucesso</title>
+</head>
+<body>
+<h1>Sucesso</h1>
+
+<p th:text="${veiculo.nome}"></p>
+<p th:text="${veiculo.marca}"></p>
+<p th:text="${veiculo.cor}"></p>
+<p th:text="${veiculo.anoFabricacao}"></p>
+<p th:text="${msg}"></p>
+
+<a th:href="@{/home}">Home</a>
+</body>
+</html>

@@ -6,8 +6,13 @@
 </head>
 <body>
 <h1>Sucesso</h1>
+
+<p th:text="${produto.nome}"></p>
+<p th:text="${produto.preco}"></p>
+<p th:text="${produto.novo}"></p>
+<p th:text="${produto.dataFabricacao}"></p>
 <p th:text="${msg}"></p>
-<p th:text="${prod.nome}"></p>
-<p th:text="${prod.preco}"></p>
+
+<a th:href="@{/home}">Home</a>
 </body>
 </html>

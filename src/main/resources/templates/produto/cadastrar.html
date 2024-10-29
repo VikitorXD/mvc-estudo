@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de produto</title>
 </head>
 <body>
+<form action="/produto/cadastrar" th:object="${produto}" method="post">
 
-<form action="/produto/cadastrar" method="post">
-    <input type="text" name="nome" placeholder="Digite o nome">
-    <input type="text" name="preco" placeholder="Digite o preço">
-    <input type="submit" value="salvar">
+<div class="form-group">
+    <label for="nome">Nome</label>
+    <input th:field="*{nome}" id="nome" class="from-control">
+</div>
+
+<div class="form-group">
+    <label for="data">Data de Fabricação</label>
+    <input th:field="*{dataFabricacao}" id="data" class="from-control">
+</div>
+
+<div class="form-group">
+    <label for="novo">Novo</label>
+    <input th:field="*{novo}" id="novo" class="checkbox">
+</div>
+
+    <div class="form-group">
+        <label for="preco">Preço</label>
+        <input th:field="*{preco}" id="preco" class="checkbox">
+    </div>
+
+    <button class="btn btn-sucess">Cadastrar</button>
 </form>
-<p th:text="${prod.nome}"></p>
-<p th:text="${prod.valor}"></p>
+
+<p th:text="${coisinha}"></p>
+<p th:text="${number}"></p>
 <p th:text="${msg}"></p>
+<a th:href="@{/home}">Home</a>
+
 </body>
 </html>
